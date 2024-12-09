@@ -4,7 +4,7 @@ export default function Home() {
     <div>
         <main>
             <div className="p-10 w-screen h-screen">
-                <div className="border-gray-800 border rounded w-full h-full ">
+                <div className="w-full h-full ">
                     <CardsContainer data={{title:"Toy Story"}}/>
                 </div>
             </div>
