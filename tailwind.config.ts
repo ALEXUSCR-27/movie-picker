@@ -12,6 +12,9 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      height: {
+        'card': '55%',
+      }
     },
   },
   plugins: [],
