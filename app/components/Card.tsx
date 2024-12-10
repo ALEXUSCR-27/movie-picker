@@ -1,7 +1,7 @@
 import Image from "next/image";
 export default function Card({title, rating, url_image}: {title:string, rating:string, url_image:string}) {
     return (
-        <div className="min-w-40 max-w-56 h-auto bg-gray-800 rounded-md">
+        <div className="min-w-40 max-w-44 h-auto bg-gray-800 rounded-md">
             <div>
                 <Image
                 src={url_image}
