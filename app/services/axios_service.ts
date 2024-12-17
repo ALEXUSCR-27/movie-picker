@@ -10,7 +10,7 @@ const axiosService = axios.create({
 
 axiosService.interceptors.request.use (
     (response) => {
-        return response;
+        return response.data;
     },
     (error) => {
         alert("ERROR => "+error)
