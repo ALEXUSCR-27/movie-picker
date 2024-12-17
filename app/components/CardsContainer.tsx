@@ -1,8 +1,8 @@
-import { card_data } from "../types/card_data";
+import { card_data } from "../types/params";
 import Card from "./Card";
 import test from "../../public/test.json"
 
-export default function CardsContainer({data}: {data:card_data }) {
+export default function CardsContainer({data}: { data: Array<card_data> }) {
     const dataTemp = test.titleResults.results;
 
     return (
