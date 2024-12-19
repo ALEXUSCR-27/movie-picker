@@ -9,6 +9,7 @@ export default function Home() {
     const [data, setData] = useState(Array<card_data>);
 
     const set_data_results = ({data_results}: { data_results: card_data[] }) => {
+        console.log(data_results);
         setData(data_results);
     }
 
