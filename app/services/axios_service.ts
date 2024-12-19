@@ -8,9 +8,18 @@ const axiosService = axios.create({
     },
 });
 
-axiosService.interceptors.request.use (
+// Utilizado si se necesita realizar algo antes de enviar la solicitud al servidor
+axiosService.interceptors.request.use(
+    (config) => {
+        return config;
+    },
+    (error) => Promise.reject(error)
+);
+
+// Utilizado para trabajar los datos después de recibir la respuesta del servidor
+axiosService.interceptors.response.use (
     (response) => {
-        return response.data;
+        return response;
     },
     (error) => {
         alert("ERROR => "+error)
