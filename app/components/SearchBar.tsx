@@ -1,18 +1,19 @@
 import { useState } from "react"
 import { getMovies } from "../services/search_movie";
 import { SetDataFunction } from "../types/functions";
-import { card_data } from "../types/params";
 
 export default function SearchBar( {set_data_results}: {set_data_results:SetDataFunction}) {
     const [movie_title, setMovieTitle] = useState("");
 
-    const handleSearch = async () => {
+    const handleSearch =  async () => {
         console.log(movie_title);
         const search_movie = {movie_title:movie_title}
         try {
             const response = await getMovies(search_movie);
             if (response) {
-                set_data_results({data_results: response})
+                set_data_results({data_results: response.data});
+            } else {
+                set_data_results({data_results: []});
             }
         } catch(error) {
             console.log(error)
