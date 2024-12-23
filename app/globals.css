@@ -5,17 +5,23 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --background-image: url('/background1.svg');
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #191921;
     --foreground: #ededed;
-  }
+    --background-image: url('/noise-light.png');
+    --background-gradient: linear-gradient(#191921be, #191921be);
+    
+}
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+    color: var(--foreground);
+    background: var(--background);
+    background-image: var(--background-gradient), var(--background-image);
+    background-size: auto;
+    font-family: Arial, Helvetica, sans-serif;
 }
