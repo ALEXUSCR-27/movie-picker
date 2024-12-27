@@ -23,5 +23,5 @@ body {
     background: var(--background);
     background-image: var(--background-gradient), var(--background-image);
     background-size: auto;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--font-inter);
 }
