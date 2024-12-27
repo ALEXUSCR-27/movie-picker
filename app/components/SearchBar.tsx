@@ -24,7 +24,7 @@ export default function SearchBar( {set_data_results}: {set_data_results:SetData
 
     return (
         <div className="flex justify-center">
-            <input className="w-3/12 text-black" value={movie_title} onChange={(e) => setMovieTitle(e.target.value)} placeholder="Search movie by name"></input>
+            <input className="w-[30rem] text-black" value={movie_title} onChange={(e) => setMovieTitle(e.target.value)} placeholder="Search movie by name"></input>
             <button className="pl-3" onClick={() => handleSearch()}>Search</button>
         </div>
     )

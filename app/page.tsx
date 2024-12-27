@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import CardsContainer from "./components/CardsContainer";
-import SearchBar from "./components/SearchBar";
+import Navbar from "./components/Navbar";
 import { card_data } from "./types/params";
 
 export default function Home() {
@@ -14,15 +14,13 @@ export default function Home() {
     }
 
     return (
-        <div>
+        <div className="w-dvw flex flex-col gap-[5rem]">
+            <header>
+                <Navbar set_data_results={set_data_results}/>
+            </header>
             <main>
-                <div className="p-5 w-full h-full content-center items-center">
-                    <div className="p-5">
-                        <SearchBar set_data_results={set_data_results}/>
-                    </div>
-                    <div>
-                        <CardsContainer data={data}/>
-                    </div>
+                <div>
+                    <CardsContainer data={data}/>
                 </div>
             </main>
         </div>
